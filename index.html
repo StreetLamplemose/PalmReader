@@ -1,0 +1,127 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2575.7">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; -webkit-text-stroke: #000000}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; -webkit-text-stroke: #000000; min-height: 14.0px}
+    span.s1 {font-kerning: none}
+  </style>
+</head>
+<body>
+<p class="p1"><span class="s1">&lt;!doctype html&gt;</span></p>
+<p class="p1"><span class="s1">&lt;html lang="en"&gt;</span></p>
+<p class="p1"><span class="s1">&lt;head&gt;</span></p>
+<p class="p1"><span class="s1">&lt;meta charset="utf-8" /&gt;</span></p>
+<p class="p1"><span class="s1">&lt;meta name="viewport" content="width=device-width,initial-scale=1" /&gt;</span></p>
+<p class="p1"><span class="s1">&lt;title&gt;Palm Reader&lt;/title&gt;</span></p>
+<p class="p1"><span class="s1">&lt;style&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>:root{--bg:#0b1020;--card:#0f1724;--accent:#6be7c4;--text:#e6f0ff}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>html,body{height:100%;margin:0;background:radial-gradient(1200px 600px at 10% 10%, #07101a, var(--bg));font-family:Inter,system-ui,Segoe UI,Roboto,Arial;}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>.wrap{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:24px}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>.card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));border:1px solid rgba(107,231,196,0.08);width:100%;max-width:520px;padding:28px;border-radius:14px;box-shadow:0 10px 30px rgba(2,6,23,0.6);color:var(--text)}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>h1{margin:0 0 8px;font-size:20px;letter-spacing:0.6px}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>p.fortune{font-size:20px;margin:18px 0;padding:18px;background:rgba(107,231,196,0.03);border-radius:10px;border:1px solid rgba(107,231,196,0.04);min-height:78px;display:flex;align-items:center;justify-content:center; text-align:center;}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>.small{font-size:12px;color:#9fb0c8;margin-top:6px}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>.btns{display:flex;gap:8px;margin-top:12px}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>button{background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--text);padding:8px 12px;border-radius:8px;cursor:pointer}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>button.primary{background:var(--accent);color:#072020;border:none;box-shadow:0 6px 18px rgba(107,231,196,0.12)}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>.credits{font-size:11px;color:#89a3bf;margin-top:10px;text-align:center}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>.pulse{animation:pulse 900ms ease}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>@keyframes pulse {0%{transform:scale(.98)}50%{transform:scale(1.02)}100%{transform:scale(1)}}</span></p>
+<p class="p1"><span class="s1">&lt;/style&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/head&gt;</span></p>
+<p class="p1"><span class="s1">&lt;body&gt;</span></p>
+<p class="p1"><span class="s1">&lt;div class="wrap"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;div class="card" role="main"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;h1&gt;Palm Reader&lt;/h1&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;div class="small"&gt;Scan detected — your fortune appears below.&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;p class="fortune" id="fortune"&gt;Reading the lines...&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;div class="btns"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;button id="again"&gt;Another&lt;/button&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;button class="primary" id="share"&gt;Share&lt;/button&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;div class="credits"&gt;Palm Reader • Tap your hand — fortune updates each scan or tap&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/div&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">&lt;script&gt;</span></p>
+<p class="p1"><span class="s1">const fortunes = [</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space"> </span>"A small kindness will return to you in a surprising way.",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space"> </span>"You will soon discover a hidden talent.",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space"> </span>"A message you need is closer than you think.",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space"> </span>"Make a little space — new opportunities will arrive.",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space"> </span>"Someone will laugh at your next terrible joke — profit.",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space"> </span>"Trust your curiosity; it will take you somewhere interesting.",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space"> </span>"An old friend will resurface with good news.",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space"> </span>"Do one thing today your future self will thank you for.",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space"> </span>"A coincidence will feel like fate — enjoy it.",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space"> </span>"Your stubbornness will save the day in an odd way.",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space"> </span>"A secret you keep will become a funny story.",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space"> </span>"Money comes when you least expect it (and usually for pizza).",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space"> </span>"You will make an unexpected ally.",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space"> </span>"The right question will change your path.",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space"> </span>"A late-night idea is worth following in the morning.",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space"> </span>"You will be offered something twice — accept the second time.",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space"> </span>"A tiny risk will create a big reward.",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space"> </span>"You will find clarity in a place you forgot to look.",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space"> </span>"Someone admires your courage silently.",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space"> </span>"Take one day this week and do nothing — your mind will repay you."</span></p>
+<p class="p1"><span class="s1">];</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">function pickRandom(){</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>return fortunes[Math.floor(Math.random()*fortunes.length)];</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">const el = document.getElementById('fortune');</span></p>
+<p class="p1"><span class="s1">const againBtn = document.getElementById('again');</span></p>
+<p class="p1"><span class="s1">const shareBtn = document.getElementById('share');</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">function showFortune(text){</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>el.classList.remove('pulse');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>void el.offsetWidth; // restart animation</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>el.textContent = text;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>el.classList.add('pulse');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>// optional: text-to-speech</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>if(window.speechSynthesis &amp;&amp; localStorage.getItem('speak') === '1'){</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>const u = new SpeechSynthesisUtterance(text);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>u.lang = 'en-US';</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>window.speechSynthesis.cancel();</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>window.speechSynthesis.speak(u);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>}</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">function init(){</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>// Attempt to avoid repeating same fortune for the same device in quick succession:</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>const last = sessionStorage.getItem('lastFortune');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>let f = pickRandom();</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>if(last &amp;&amp; fortunes.length &gt; 1){</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>let attempts = 0;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>while(f === last &amp;&amp; attempts &lt; 10){ f = pickRandom(); attempts++; }</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>sessionStorage.setItem('lastFortune', f);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>showFortune(f);</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p1"><span class="s1">againBtn.addEventListener('click', () =&gt; {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>const f = pickRandom();</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>sessionStorage.setItem('lastFortune', f);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>showFortune(f);</span></p>
+<p class="p1"><span class="s1">});</span></p>
+<p class="p1"><span class="s1">shareBtn.addEventListener('click', () =&gt; {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>if(navigator.share){</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>navigator.share({title:'My Fortune', text:el.textContent}).catch(()=&gt;{});</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>} else {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>navigator.clipboard.writeText(el.textContent).then(()=&gt; alert('Fortune copied to clipboard'));</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>}</span></p>
+<p class="p1"><span class="s1">});</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">init();</span></p>
+<p class="p1"><span class="s1">&lt;/script&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/body&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/html&gt;</span></p>
+</body>
+</html>
