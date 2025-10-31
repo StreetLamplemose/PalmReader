@@ -1,0 +1,79 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2575.7">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
+  </style>
+</head>
+<body>
+<p class="p1">&lt;!DOCTYPE html&gt;</p>
+<p class="p1">&lt;html lang="en"&gt;</p>
+<p class="p1">&lt;head&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;meta charset="UTF-8"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;title&gt;Palm Reader&lt;/title&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;style&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>body {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-family: 'Comic Sans MS', sans-serif;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background-color: #f2e6ff;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>text-align: center;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding-top: 50px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>h1 {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: #800080;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-size: 3em;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>#fortune {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-size: 1.5em;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin: 30px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: #4b0082;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/style&gt;</p>
+<p class="p1">&lt;/head&gt;</p>
+<p class="p1">&lt;body&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;h1&gt;Palm Reader&lt;/h1&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div id="fortune"&gt;&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;script&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const fortunes = [</p>
+<p class="p1"><span class="Apple-converted-space">            </span>"A thrilling time is in your near future.",</p>
+<p class="p1"><span class="Apple-converted-space">            </span>"Beware of the sneaky skeletons!",</p>
+<p class="p1"><span class="Apple-converted-space">            </span>"You will find a surprise gift today.",</p>
+<p class="p1"><span class="Apple-converted-space">            </span>"A mysterious stranger will change your life.",</p>
+<p class="p1"><span class="Apple-converted-space">            </span>"Good luck is coming your way.",</p>
+<p class="p1"><span class="Apple-converted-space">            </span>"A shadowy figure watches over you.",</p>
+<p class="p1"><span class="Apple-converted-space">            </span>"Your hand reveals hidden wisdom.",</p>
+<p class="p1"><span class="Apple-converted-space">            </span>"Expect the unexpected this Halloween!",</p>
+<p class="p1"><span class="Apple-converted-space">            </span>"Someone will soon compliment your costume.",</p>
+<p class="p1"><span class="Apple-converted-space">            </span>"A sweet treat is coming your way.",</p>
+<p class="p1"><span class="Apple-converted-space">            </span>"You may encounter a magical pumpkin tonight.",</p>
+<p class="p1"><span class="Apple-converted-space">            </span>"A hidden talent will be discovered soon.",</p>
+<p class="p1"><span class="Apple-converted-space">            </span>"Ghostly laughter will brighten your evening.",</p>
+<p class="p1"><span class="Apple-converted-space">            </span>"An old friend will reach out to you.",</p>
+<p class="p1"><span class="Apple-converted-space">            </span>"Mystery and excitement await you.",</p>
+<p class="p1"><span class="Apple-converted-space">            </span>"A small act of kindness will reward you.",</p>
+<p class="p1"><span class="Apple-converted-space">            </span>"You will see something you’ve never noticed before.",</p>
+<p class="p1"><span class="Apple-converted-space">            </span>"The spirits whisper a secret to you.",</p>
+<p class="p1"><span class="Apple-converted-space">            </span>"A black cat brings good luck in disguise.",</p>
+<p class="p1"><span class="Apple-converted-space">            </span>"You will solve a puzzle you thought impossible.",</p>
+<p class="p1"><span class="Apple-converted-space">            </span>"Adventure is just around the corner.",</p>
+<p class="p1"><span class="Apple-converted-space">            </span>"A friendly hand will help you soon.",</p>
+<p class="p1"><span class="Apple-converted-space">            </span>"A spooky surprise will make you smile.",</p>
+<p class="p1"><span class="Apple-converted-space">            </span>"Your intuition is stronger than you think.",</p>
+<p class="p1"><span class="Apple-converted-space">            </span>"Tonight, the stars align in your favor."</p>
+<p class="p1"><span class="Apple-converted-space">        </span>];</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>// Automatically pick a random fortune on page load</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const randomIndex = Math.floor(Math.random() * fortunes.length);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>document.getElementById('fortune').textContent = fortunes[randomIndex];</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/script&gt;</p>
+<p class="p1">&lt;/body&gt;</p>
+<p class="p1">&lt;/html&gt;</p>
+</body>
+</html>
