@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Palm Reader: Funny Fortune</title>
+    <style>
+        body {
+            font-family: 'Comic Sans MS', sans-serif;
+            background: linear-gradient(135deg, #ffccf9, #ff99cc);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+            padding: 20px;
+        }
+        h1 {
+            font-size: 3em;
+            color: #800080;
+            margin-bottom: 50px;
+        }
+        #fortune {
+            font-size: 1.8em;
+            color: #4b0082;
+            max-width: 600px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Palm Reader</h1>
+    <div id="fortune"></div>
+
+    <script>
+        const fortunes = [
+            "Someone is thinking about stealing your fries. Just let them.",
+            "Your ex will think about you today… in regret.",
+            "You will sit on something sticky. Sorry.",
+            "A taco will change your life. Eat it.",
+            "Someone is plotting a prank involving glitter… it’s probably you.",
+            "Your socks will go missing in the laundry. Forever.",
+            "You will try to adult… fail… then nap instead.",
+            "Somebody will smell you… in a good way.",
+            "Your diet plans will die a heroic death tonight.",
+            "You will accidentally like your ex’s Instagram from 2016.",
+            "A fart will happen at the worst possible moment. Own it.",
+            "You will overthink something stupid… and laugh about it later.",
+            "Your cat/dog secretly hates your new haircut.",
+            "You will make a joke no one gets… except a stranger on the bus.",
+            "You will get a paper cut… in a place you didn’t know was paper-sensitive.",
+            "Somebody is thinking about ghosting you… but they’ll chicken out.",
+            "You will accidentally fart while laughing… in a serious meeting.",
+            "You will trip over air… and look fabulous doing it.",
+            "Someone will give you unsolicited advice… ignore them.",
+            "Your future self says: eat the cookie, it’s worth it.",
+            "You will laugh so hard that someone questions your sanity.",
+            "Your Uber driver will judge your playlist… slightly.",
+            "A stranger will compliment your aura… or your shoes. Probably shoes.",
+            "You will burn something edible… but it still tastes okay.",
+            "Someone will spill tea… and you’re not even invited.",
+            "You will make a meme that changes the internet. Or just your group chat.",
+            "Your eyebrows will do exactly what they want today.",
+            "You will accidentally send a screenshot to the wrong person… lol.",
+            "Someone will trip over nothing… maybe you’ll join them.",
+            "You will eat a snack that is technically ‘expired’… and live.",
+            "Someone thinks you’re mysterious… mostly confused, mostly attractive.",
+            "You will find an old text you regret… laugh instead of cry.",
+            "You will open the fridge for no reason… again… and find nothing.",
+            "A pillow will judge your sleep schedule.",
+            "You will laugh at a joke before it’s funny… just own it.",
+            "Someone will snort while laughing… it’s contagious.",
+            "A stranger will smile at you… or was that a sneeze?",
+            "You will step on Lego… metaphorically, maybe literally.",
+            "Your dog/cat will knock something over… just like you predicted.",
+            "Someone will forget your name… and it’s fine, you forget theirs too.",
+            "Your playlist will shuffle to the exact wrong song… and you’ll love it.",
+            "You will make a typo… that changes everything… hilariously.",
+            "You will laugh so hard at yourself, it counts as cardio."
+        ];
+
+        // Pick a random fortune immediately
+        const randomIndex = Math.floor(Math.random() * fortunes.length);
+        document.getElementById('fortune').textContent = fortunes[randomIndex];
+    </script>
+</body>
+</html>
